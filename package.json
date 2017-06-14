@@ -1,0 +1,17 @@
+{
+  "name": "SMART-bos-fhir-1",
+  "description": "Example app for Boston FHIR",
+  "license": "MIT",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "nodemon -w ./ --ignore bundle.js --ext \".\" --exec \"browserify app.js > bundle.js\""
+  },
+  "dependencies": {
+    "browserify": "^14.4.0",
+    "fhir.js": "0.0.20"
+  },
+  "devDependencies": {
+    "eslint": "^4.0.0",
+    "nodemon": "^1.11.0"
+  }
+}
