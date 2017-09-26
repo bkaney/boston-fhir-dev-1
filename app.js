@@ -1,11 +1,26 @@
 /*eslint no-console: ["error", { allow: ["log"] }] */
 
-var fhir = require("fhir.js");
-var config = { baseUrl: "http://fhirtest.uhn.ca/baseDstu3" };
-var client = fhir(config);
+var nativeFhir = require('fhir.js/src/adapters/native');
+var config = { baseUrl: "https://sb-fhir-stu3.smarthealthit.org/smartstu3/open", debug: true };
+var client = nativeFhir(config);
+
+// Create a new patient.
+//client.create({ resource: { resourceType: 'Patient', name: [ { family: 'Wazoo-2' } ] } })
+//  .then(function(res){
+//    var patient = res.data;
+//    console.log(patient);
+//  })
+//  .catch(function(res){
+//    if (res.status){
+//      console.log("Error Status:", res.status);
+//    }
+//    if (res.message){
+//      console.log("Error Message:", res.message);
+//    }
+//  });
 
 // Set a default patient ID, override with query param `patient`.
-var patientId = "test-1557780";
+var patientId = "44a35c47-72b1-4e49-bb1e-518b0abedd65";
 var queryParams = new URLSearchParams(window.location.search);
 if (queryParams.has("patient")){
   patientId = queryParams.get("patient");
@@ -55,6 +70,12 @@ client
       if (item.resource.medicationCodeableConcept) {
         medicationRequestDetailsEl.innerHTML += "<li>" + item.resource.medicationCodeableConcept.text + "</li>";
       }
+      if (item.resource.medicationReference) {
+        client.resolve({reference: item.resource.medicationReference}).then(function(res) {
+          var item = res.data;
+          medicationRequestDetailsEl.innerHTML += "<li>" + item.code.text + "</li>";
+        });
+      }
     });
   })
   .catch(function(res){
@@ -65,3 +86,4 @@ client
       console.log("Error Message:", res.message);
     }
   });
+
