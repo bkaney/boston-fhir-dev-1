@@ -1,8 +1,9 @@
 /*eslint no-console: ["error", { allow: ["log"] }] */
 
-var nativeFhir = require('fhir.js/src/adapters/native');
+var $ = jQuery = require('jquery');
+var fhir = require('fhir.js/src/adapters/jquery');
 var config = { baseUrl: "https://sb-fhir-stu3.smarthealthit.org/smartstu3/open", debug: true };
-var client = nativeFhir(config);
+var client = fhir(config);
 
 // Create a new patient.
 //client.create({ resource: { resourceType: 'Patient', name: [ { family: 'Wazoo-2' } ] } })
@@ -21,10 +22,10 @@ var client = nativeFhir(config);
 
 // Set a default patient ID, override with query param `patient`.
 var patientId = "44a35c47-72b1-4e49-bb1e-518b0abedd65";
-var queryParams = new URLSearchParams(window.location.search);
-if (queryParams.has("patient")){
-  patientId = queryParams.get("patient");
-}
+//var queryParams = new URLSearchParams(window.location.search);
+//if (queryParams.has("patient")){
+//  patientId = queryParams.get("patient");
+//}
 
 // Patient Demographics
 client

@@ -4,14 +4,17 @@
   "license": "MIT",
   "version": "0.0.1",
   "scripts": {
-    "start": "nodemon -w ./ --ignore bundle.js --ext \".\" --exec \"browserify app.js > bundle.js\""
+    "webpack": "webpack --progress --colors",
+    "build": "webpack",
+    "start": "webpack-dev-server --progress --colors"
   },
   "dependencies": {
-    "browserify": "^14.4.0",
-    "fhir.js": "0.0.20"
+    "fhir.js": "0.0.20",
+    "jquery": "^3.2.1"
   },
   "devDependencies": {
     "eslint": "^4.0.0",
-    "nodemon": "^1.11.0"
+    "webpack": "^3.6.0",
+    "webpack-dev-server": "^2.8.2"
   }
 }
