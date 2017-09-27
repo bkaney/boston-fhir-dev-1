@@ -21,9 +21,18 @@ Run the following command:
 
     % npm start
 
-That will run nodemon automatically recreate the bundle.js file for the app to
-work whenever a file changes. You will need to run this once after you clone
-the repository. Keep the process running while you develop.
+This will start the webpack development server. You should see something like this in your console:
+
+```
+> SMART-bos-fhir-1@0.0.1 start /Users/bkaney/code/boston-fhir/boston-fhir-dev-1-backup
+> webpack-dev-server --progress --colors
+
+ 10% building modules 1/1 modules 0 active
+Project is running at http://localhost:8081/
+webpack output is served from /
+```
+
+Open the URL that appears (here http://localhost:8081/) in your browser to see the app.
 
 Learn more about
 [webpack](http://webpack.github.io/docs/tutorials/getting-started/) (see toward
