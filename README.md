@@ -24,7 +24,7 @@ Run the following command:
 This will start the webpack development server. You should see something like this in your console:
 
 ```
-> SMART-bos-fhir-1@0.0.1 start /Users/bkaney/code/boston-fhir/boston-fhir-dev-1-backup
+> SMART-bos-fhir-1@0.0.1 start /Users/bkaney/code/boston-fhir/boston-fhir-dev-1
 > webpack-dev-server --progress --colors
 
  10% building modules 1/1 modules 0 active
