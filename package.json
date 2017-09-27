@@ -4,8 +4,6 @@
   "license": "MIT",
   "version": "0.0.1",
   "scripts": {
-    "webpack": "webpack --progress --colors",
-    "build": "webpack",
     "start": "webpack-dev-server --progress --colors"
   },
   "dependencies": {
