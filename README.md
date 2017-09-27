@@ -24,3 +24,8 @@ Run the following command:
 That will run nodemon automatically recreate the bundle.js file for the app to
 work whenever a file changes. You will need to run this once after you clone
 the repository. Keep the process running while you develop.
+
+Learn more about
+[webpack][http://webpack.github.io/docs/tutorials/getting-started/] (see toward
+the bottom of that page about the
+[webpack-dev-server][https://webpack.github.io/docs/webpack-dev-server.html]).
