@@ -21,11 +21,11 @@ var client = fhir(config);
 //  });
 
 // Set a default patient ID, override with query param `patient`.
-var patientId = "44a35c47-72b1-4e49-bb1e-518b0abedd65";
-//var queryParams = new URLSearchParams(window.location.search);
-//if (queryParams.has("patient")){
-//  patientId = queryParams.get("patient");
-//}
+var patientId = "eb3271e1-ae1b-4644-9332-41e32c829486";
+var queryParams = new URLSearchParams(window.location.search);
+if (queryParams.has("patient")){
+  patientId = queryParams.get("patient");
+}
 
 // Patient Demographics
 client
