@@ -28,11 +28,11 @@ This will start the webpack development server. You should see something like th
 > webpack-dev-server --progress --colors
 
  10% building modules 1/1 modules 0 active
-Project is running at http://localhost:8081/
+Project is running at http://localhost:8080/
 webpack output is served from /
 ```
 
-Open the URL that appears (here http://localhost:8081/) in your browser to see the app.
+Open the URL that appears (here http://localhost:8080/) in your browser to see the app.
 
 Learn more about
 [webpack](http://webpack.github.io/docs/tutorials/getting-started/) (see toward

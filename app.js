@@ -2,7 +2,7 @@
 
 var $ = jQuery = require('jquery');
 var fhir = require('fhir.js/src/adapters/jquery');
-var config = { baseUrl: "https://sb-fhir-stu3.smarthealthit.org/smartstu3/open", debug: true };
+var config = { baseUrl: "https://r3.smarthealthit.org/", debug: true };
 var client = fhir(config);
 
 // Create a new patient.
